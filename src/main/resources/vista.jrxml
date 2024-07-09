@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="vista" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20"
+              topMargin="20" bottomMargin="20" uuid="1b348688-7ec3-44f2-ab6a-511769756384">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Historial"/>
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <queryString>
+        <![CDATA[SELECT vista_menu_comida_historial.menuid,
+	comidas.menuid,
+	vista_menu_comida_historial.nombremenu,
+	vista_menu_comida_historial.id,
+	vista_menu_comida_historial.nombrecomida,
+	vista_menu_comida_historial.precio,
+	vista_menu_comida_historial.categoria
+FROM comidas
+	INNER JOIN menus ON 
+	 comidas.menuid = menus.menuid ,
+	vista_menu_comida_historial]]>
+    </queryString>
+    <field name="menuid" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="menuid"/>
+        <property name="com.jaspersoft.studio.field.label" value="menuid"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="vista_menu_comida_historial"/>
+    </field>
+    <field name="COLUMN_2" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="menuid"/>
+        <property name="com.jaspersoft.studio.field.label" value="menuid"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="comidas"/>
+    </field>
+    <field name="nombremenu" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="nombremenu"/>
+        <property name="com.jaspersoft.studio.field.label" value="nombremenu"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="vista_menu_comida_historial"/>
+    </field>
+    <field name="id" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="vista_menu_comida_historial"/>
+    </field>
+    <field name="nombrecomida" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="nombrecomida"/>
+        <property name="com.jaspersoft.studio.field.label" value="nombrecomida"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="vista_menu_comida_historial"/>
+    </field>
+    <field name="precio" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="precio"/>
+        <property name="com.jaspersoft.studio.field.label" value="precio"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="vista_menu_comida_historial"/>
+    </field>
+    <field name="categoria" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="categoria"/>
+        <property name="com.jaspersoft.studio.field.label" value="categoria"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="vista_menu_comida_historial"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="110" splitType="Stretch">
+            <staticText>
+                <reportElement x="80" y="6" width="459" height="58" uuid="a94d1dee-466e-4998-8389-032b392c87d8"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="25" isBold="true"/>
+                </textElement>
+                <text><![CDATA[REPORTE DE HISTORIAL VISTA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="110" y="64" width="400" height="40" uuid="c73ca350-add4-4288-9a71-ad3cd5924a52"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="14" isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA["Sabores innovadores con un toque tecnológico."]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="33" splitType="Stretch">
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="485" y="-4" width="80" height="20" uuid="aeddc939-44af-40d2-8a60-5f9adeae510c"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="34" splitType="Stretch">
+            <staticText>
+                <reportElement x="30" y="0" width="70" height="30" uuid="431bced1-9b3c-4f91-b43a-5a867bfedc23">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="6977136e-8d96-448a-bc15-7ce87680d1df"/>
+                </reportElement>
+                <text><![CDATA[id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="130" y="0" width="90" height="30" uuid="749451bf-dbbc-4b09-9295-7345921b9617">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="c87b4817-6adc-402d-a48d-f2b172a7cade"/>
+                </reportElement>
+                <text><![CDATA[nombremenu]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="257" y="0" width="81" height="30" uuid="41e94a3a-99b6-43cb-9adc-501282b8edf3">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="510f7274-d956-489c-9d0c-c8aa3f58c27b"/>
+                </reportElement>
+                <text><![CDATA[nombrecomida]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="480" y="2" width="90" height="30" uuid="0bd0b6f4-4284-4e7f-98f0-92d2cca26376">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="fbe9c4a5-a7ef-410f-8205-dd44e637bcd5"/>
+                </reportElement>
+                <text><![CDATA[precio]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="365" y="0" width="89" height="30" uuid="2dd27c6b-bb53-4e60-ac82-0d2303b24325">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="46de7802-93d1-4f55-9fd3-bf862698ec8c"/>
+                </reportElement>
+                <text><![CDATA[categoria]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="58" splitType="Stretch">
+            <line>
+                <reportElement x="-10" y="0" width="580" height="1" uuid="ef7651b2-f3f3-4e65-98a1-bd8f954f0c4f"/>
+            </line>
+            <textField>
+                <reportElement x="30" y="20" width="70" height="30" uuid="bb297f56-a851-4adf-98a4-294598834a20">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="6977136e-8d96-448a-bc15-7ce87680d1df"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="130" y="20" width="90" height="30" uuid="81c03103-f2b2-48d0-bc3e-d88a3985ae59">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="c87b4817-6adc-402d-a48d-f2b172a7cade"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{nombremenu}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="250" y="20" width="89" height="30" uuid="da7b02c3-7868-4e04-963a-4accfac42187">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="510f7274-d956-489c-9d0c-c8aa3f58c27b"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{nombrecomida}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="365" y="20" width="89" height="30" uuid="f93f6b7f-8f58-4aa8-8fe1-76f381f4d5ff">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="46de7802-93d1-4f55-9fd3-bf862698ec8c"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="20" width="90" height="30" uuid="48eeab3a-c903-430d-a2a1-080ecb85d74e">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="fbe9c4a5-a7ef-410f-8205-dd44e637bcd5"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="43" splitType="Stretch">
+            <textField>
+                <reportElement x="360" y="20" width="210" height="18" uuid="7d97f14a-3c23-4f3b-8c76-d86bf58bbac8"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+"/"+$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>
